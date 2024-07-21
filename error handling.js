@@ -50,3 +50,15 @@ function printobj(obj) {
 
 printobj(person);
 printobj(school);
+
+let product = ['baby monitor', 'organizer', 'hoodie', 'vtech'];
+console.log(product[0]);
+console.log(product.join(' and '));
+
+product = ['baby monitor', 'organizer', 'hoodie', 'vtech'];
+product.push('babysense');
+
+product = ['baby monitor', 'organizer', 'hoodie', 'vtech'];
+product.splice();
+product.splice(2, 1, 'vtech');
+product.splice(0, 3);
