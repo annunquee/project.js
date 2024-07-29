@@ -11,6 +11,18 @@ function handleSearch() {
     }
 }
 
+function enlargeImage(img) {
+    var enlargedImageContainer = document.getElementById('enlargedImageContainer');
+    var enlargedImage = document.getElementById('enlargedImage');
+    enlargedImage.src = img.src;
+    enlargedImageContainer.style.display = 'flex';
+}
+
+function closeEnlargedImage() {
+    var enlargedImageContainer = document.getElementById('enlargedImageContainer');
+    enlargedImageContainer.style.display = 'none';
+}
+
 class person {
     constructor(name, address, email, contact) {
         this.name = name;
@@ -19,6 +31,30 @@ class person {
         this.contact = contact;
              console.log('Hello $(this.name)');
     }
+}
+
+function validateForm() {
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var message = document.getElementById('message').value.trim();
+
+    if (name === '') {
+        alert('Name is required');
+        return false;
+    }
+
+    if (email === '') {
+        alert('Email is required');
+        return false;
+    }
+
+    if (message === '') {
+        alert('Message is required');
+        return false;
+    }
+
+    alert('Thank you for contacting us. We will reply as soon as possible.');
+    return true;
 }
 
 let person = {
@@ -62,3 +98,18 @@ product = ['baby monitor', 'organizer', 'hoodie', 'vtech'];
 product.splice();
 product.splice(2, 1, 'vtech');
 product.splice(0, 3);
+
+var button = document.querySelector(button);
+var box = document.getElementById(changePage);
+
+function changePage(){
+    box.nextPage = newPage;
+}
+
+function changePage(){
+    if(box.nextPage == 'newPage'){
+        box.newPage == 'nextpage';
+    }else{
+        box.nextPage = 'firstPage'
+    }
+}
