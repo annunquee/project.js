@@ -99,17 +99,38 @@ product.splice();
 product.splice(2, 1, 'vtech');
 product.splice(0, 3);
 
-var button = document.querySelector(button);
-var box = document.getElementById(changePage);
+function signupForm() {
+    var  name = document.getElementById('name').value.trim();
+    var address = document.getElementById('address').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var contact = document.getElementById('contact').value.trim();
+    var password = document.getElementById('password').value.trim();
 
-function changePage(){
-    box.nextPage = newPage;
-}
-
-function changePage(){
-    if(box.nextPage == 'newPage'){
-        box.newPage == 'nextpage';
-    }else{
-        box.nextPage = 'firstPage'
+    if (name === '') {
+        alert('Name is required');
+        return false;
     }
+
+    if (address === '') {
+        alert('Address is required');
+        return false;
+    }
+
+    if (email === '') {
+        alert('Email is required');
+        return false;
+    }
+
+    if (contact === '') {
+        alert('Contact is required');
+        return false;
+    }
+
+    if (password === '') {
+        alert('Password is required');
+        return false;
+    }
+
+    alert('Order completed.');
+    return true;
 }
