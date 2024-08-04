@@ -60,6 +60,12 @@ header {
  a:hover {
     background-color:rgb(192, 186, 180);
  }
+ 
+img {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
 
  .gallery {
     display: inline-block;
@@ -141,6 +147,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #ff4f9b;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
