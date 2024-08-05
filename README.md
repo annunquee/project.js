@@ -8,3 +8,4 @@ This project was built along with a fully functioning photo gallery.Every code i
 * Got some inspiration on website from Mammas and Papas ireland.
 * Inspirations on refunds and shipping came from Diesel.ie.
 * Photos were uploaded off SHEIN, Ickle bubba, Amazon and Smyths.
+* staffs.html is'nt connected to the main website, because only shop assistant can access it not customers.
