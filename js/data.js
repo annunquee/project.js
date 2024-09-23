@@ -1,7 +1,6 @@
 const Customerdata = {
 name: 'Queen',
 address: '70 castlegateway adams town',
-Message: 'inquiry',
 email: 'kafikoa77@gmail.com',
 contact: '+35316109403'
 

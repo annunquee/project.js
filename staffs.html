@@ -1,34 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <title>Kids Store</title>
-     <link rel="stylesheet" href="styles.css">
-     </head>
-     <body>
-        <header>
-            <div class="logo">
-            <h1>Kids Store</h1>
-            </div>
-            <div class="search">
-                <input type="text" id="searchInput" placeholder="search....">
-                <button onclick="handleSearch()">Search</button>
-            </div>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="clothing.html">Clothing</a></li> 
-                <li><a href="toys.html">Toys</a></li> 
-                <li><a href="nursery.html">Nursery</a></li>           
-            </ul>
-        </nav>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- This is a placeholder for dynamic header which is loaded in the Javascript-->
+     <!-- You need to have these blank header and footer in each page-->
+      <!--- Then your javascript will load the header and footer from header.html and footer.html-->
+    <header></head>
+  
         <table>
             <tr>
                 <th>Customer's Name</th>
-                <th>Viewed site</th>
-                <th>Selected/Saved Product</th>
-                <th>Bought Product</th>
-                <th>Returned Product</th>
+                <th>Site visit</th>
+                <th>Items in Basket</th>
+                <th>Product Sold</th>
+                <th>Product Returned/Review</th>
             </tr>
             <tr>
                 <td>Parent</td>
@@ -42,12 +31,12 @@
                 <td>Viewed site</td>
                 <td>Selected Product</td>
                 <td>Bought Product</td>
-                <td>Returned a Product</td>
+                <td>Left Review</td>
             </tr>
             <tr>
                 <td>Daycare</td>
                 <td>Viewed site</td>
-                <td>Selected/Saved Product></td>
+                <td>Selected/Saved Product</td>
                 <td>Read Review</td>
             </tr>
             <tr>
@@ -55,19 +44,44 @@
                 <td>Viewed site</td>
                 <td>Bought Product</td>
                 <td>Read Review</td>
+                <td>Returned Product</td>
             </tr>
         </table>
-        <img src="images/logo.jpg" width="100" height="80" alt="logo">
-        <nav>
-        <ul>    
-        <li><a href="delivery.html">Delivery</a></li> 
-            <li><a href="returns.html">Returns</a></li> 
-            <li><a href="pickup.html">Store pickup</a></li> 
-            <li><a href="contact.html">About us</a></li> 
-          </ul> 
-            </nav>
-            <button id="prevpage" type="button">Click Me</button>     
-        <script src="data.js" ></script> 
-        <script src="interaction.js"></script>    
-     </body>
-     </html>
+        <br>
+        <table>
+            <tr>
+                <th>Shop assistant</th>
+                <th>Create Product</th>
+                <th>Add Product</th>
+                <th>Update Product</th>
+                <th>Delete Product</th>
+            </tr>
+            <tr>
+                <td>Cloe</td>
+                <td>Babysense</td>
+                <td>Baby monitor</td>
+                <td>Nursery</td>
+                <td>VTech</td>
+            </tr>
+            <tr>
+                <td>Kristina</td>
+                <td>learning Resourses</td>
+                <td>organizer</td>
+                <td>Toys</td>
+                <td>Space Storage</td>
+            </tr>
+            <tr>
+                <td>Cloe</td>
+                <td>2pc hoodie</td>
+                <td>next</td>
+                <td>Clothing</td>
+                <td>H&m</td>
+            </tr>
+        </table>
+        <!-- This is a placeholder for footer which is loaded using the Javascript-->
+    <footer></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
