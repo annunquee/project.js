@@ -1,3 +1,10 @@
+The main branch was my original project.https://github.com/annunquee/project.js/tree/main
+
+This branch is called feedback_from_assignment. https://github.com/annunquee/project.js/tree/feedback_from_assignment
+
+Github pages link https://annunquee.github.io/project.js/index.html 
+
+
 # Customer browser:
 as a customer. I should be able to enter and browse through a collection of products, and services. so that i will be able to buy, order, return and have it delivered. At my doorstep.
 
