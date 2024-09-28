@@ -1,3 +1,9 @@
+The main branch was my original project.https://github.com/annunquee/project.js/tree/main
+
+**Please use this branch --> This branch is called feedback_from_assignment**. https://github.com/annunquee/project.js/tree/feedback_from_assignment
+
+Github pages link https://annunquee.github.io/project.js/index.html 
+
 ## A funtional website named kids store  
 
 This project was built along with a fully functioning photo gallery.Every code in this project are fully funtional and responsive, between search, home and contact us. To pickup,returns and delivery. Clothing, Toys and Nursery all have content in it. The website consist of 3 pages namely: index, templet and staffs which contains 2 tables: The customer and shop assistant
