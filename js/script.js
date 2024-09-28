@@ -1,28 +1,3 @@
-function handleSearch() {
-    var searchQuery = document.getElementById('searchInput').value.trim();
-
-    if (searchQuery === '')
-    {
-        alert('please enter something to search.');
-
-    }
-    else{
-        alert('searching for ' + searchQuery);
-    }
-}
-
-function enlargeImage(img) {
-    var enlargedImageContainer = document.getElementById('enlargedImageContainer');
-    var enlargedImage = document.getElementById('enlargedImage');
-    enlargedImage.src = img.src;
-    enlargedImageContainer.style.display = 'flex';
-}
-
-function closeEnlargedImage() {
-    var enlargedImageContainer = document.getElementById('enlargedImageContainer');
-    enlargedImageContainer.style.display = 'none';
-}
-
 // Function to load the header content
 function loadHeader() {
     fetch('header.html')
@@ -50,32 +25,31 @@ window.onload = function() {
     loadFooter();
 };
 
+function handleSearch() {
+    var searchQuery = document.getElementById('searchInput').value.trim();
 
+    if (searchQuery === '')
+    {
+        alert('please enter something to search.');
 
-
-function validateForm() {
-    var name = document.getElementById('name').value.trim();
-    var email = document.getElementById('email').value.trim();
-    var message = document.getElementById('message').value.trim();
-
-    if (name === '') {
-        alert('Name is required');
-        return false;
     }
-
-    if (email === '') {
-        alert('Email is required');
-        return false;
+    else{
+        alert('searching for ' + searchQuery);
     }
-
-    if (message === '') {
-        alert('Message is required');
-        return false;
-    }
-
-    alert('Thank you for contacting us. We will reply as soon as possible.');
-    return true;
 }
+
+function enlargeImage(img) {
+    var enlargedImageContainer = document.getElementById('enlargedImageContainer');
+    var enlargedImage = document.getElementById('enlargedImage');
+    enlargedImage.src = img.src;
+    enlargedImageContainer.style.display = 'flex';
+}
+
+function closeEnlargedImage() {
+    var enlargedImageContainer = document.getElementById('enlargedImageContainer');
+    enlargedImageContainer.style.display = 'none';
+}
+
 
 // Function to validate the contact form
 function validateContactForm() {
@@ -140,31 +114,81 @@ function showError(message, fieldId) {
     field.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-// Function to load the header content
-function loadHeader() {
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.querySelector('header').innerHTML = data; // Replace the header content
-        })
-        .catch(error => console.log('Error loading header:', error));
+function signupForm() {
+    // Get form values
+    var name = document.getElementById('name').value.trim();
+    var address = document.getElementById('address').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var contact = document.getElementById('contact').value.trim();
+  
+
+    // Clear previous error messages
+    clearErrors();
+
+    // Validate the form fields
+    var isValid = true;
+
+    if (name === '') {
+        displayError('name-error', 'Name is required.');
+        isValid = false;
+    }
+
+    if (address === '') {
+        displayError('address-error', 'Address is required.');
+        isValid = false;
+    }
+
+    if (email === '' || !validateEmail(email)) {
+        displayError('email-error', 'Please enter a valid email address.');
+        isValid = false;
+    }
+
+    if (contact === '' || !validateContact(contact)) {
+        displayError('contact-error', 'Please enter a valid contact number.');
+        isValid = false;
+    }
+
+    if (!isValid) {
+        return false; // Prevent form submission if validation fails
+    }
+
+    // If validation passes
+    document.getElementById('success-message').innerText = 'Signup completed successfully!';
+    disableForm(); // Disable the form to prevent resubmission
+    return false; // Return false to prevent form submission for demonstration purposes
 }
 
-// Function to load the footer content
-function loadFooter() {
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.querySelector('footer').innerHTML = data; // Replace the footer content
-        })
-        .catch(error => console.log('Error loading footer:', error));
+// Helper function to display error messages
+function displayError(elementId, message) {
+    document.getElementById(elementId).innerText = message;
 }
 
-//This function will be called each time a window is loaded. 
-// it calls the above functions to load the header and footer when the page is loaded
-window.onload = function() {
-    loadHeader();
-    loadFooter();
-};
+// Helper function to clear error messages
+function clearErrors() {
+    var errors = document.getElementsByClassName('error-message');
+    for (var i = 0; i < errors.length; i++) {
+        errors[i].innerText = '';
+    }
+    document.getElementById('success-message').innerText = '';
+}
 
+// Email validation function
+function validateEmail(email) {
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
 
+// Contact validation function (ensure it's numeric and has a minimum of 7 digits)
+function validateContact(contact) {
+    var contactPattern = /^[0-9]{7,}$/;
+    return contactPattern.test(contact);
+}
+
+// Disable the form after successful submission
+function disableForm() {
+    var form = document.getElementById('signup');
+    var elements = form.elements;
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].disabled = true;
+    }
+}

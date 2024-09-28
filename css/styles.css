@@ -9,6 +9,21 @@ body {
     box-sizing: border-box;
 }
 
+h3, h2 {
+    font-size: 1.8em; /* Larger size for emphasis */
+    color: #007bff; /* Blue color to match branding */
+    margin-bottom: 10px;
+    text-align: center; /* Center the headings */
+}
+
+p {
+    font-size: 1.1em; /* Slightly larger for better readability */
+    line-height: 1.6; /* Improved line spacing for readability */
+    color: #333; /* Dark grey for better contrast */
+    margin-bottom: 20px;
+    text-align: justify; /* Neater alignment of paragraph text */
+}
+
 /* Improved hover effect on links */
 a:hover {
     color: #007bff; /* Changed hover color to a modern blue */
@@ -191,6 +206,18 @@ button[type="submit"]:hover {
     background-color: #218838; /* Darker green on hover */
 }
 
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
 /* Table Styles */
 table {
     width: 100%;
@@ -271,4 +298,5 @@ tr {
         width: 90%;
     }
 }
+
 
